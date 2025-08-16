@@ -9,3 +9,5 @@ Watch tutorial sample
 ## Local Development
 
 1. Open index.html in your browser.
+
+## new stuff added, open for testing...
