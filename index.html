@@ -5,28 +5,48 @@
     </head>
 
     <body>
+
+        <form>
+        <!--forms that contain labels with input type text to input your information here!-->
+            <label for="id_name">Enter name: </label>
+                <input type="text" id="id_name" name="id_name"><br>
+            <label for="id_age">Enter age: </label>
+                <input type="text" id="id_age" name="id_age"><br>
+            <label for="id_student">Are you a student: </label>
+                <input type="text" id="id_student" name="id_student"><br>
+                
+        </form>
         <p id="demo"></p>
-        <button type = "button" id="btn_click">Click this for a result</button>
+        
+        <!--button executes displayInfo() from javascript below hihihi-->
+        
+        <button type = "button" id="btn_click" onclick="displayInfo()">Click this for a result</button>
     </body>
 
     <script>
+       //your generic ass function
+        function displayInfo(){
 
+            let name=document.getElementById("id_name").value;
+            let age=document.getElementById("id_age").value;//this is how you retrieve data from html id
+            let isStudent=document.getElementById("id_student").value;
+            let student = "";
 
-        name = prompt("Enter your name: ");
-        age = prompt("Enter your age: ");
-        isStudent = prompt("Are you a student? ");
-        student = "";
+            if(isStudent.toLowerCase() == "yes"){
+                student = "am a student";
+            }else{
+                    student = "am not a student";
+            }
+           
+            if(name != null){
+                document.getElementById("demo").innerHTML = `Hi my name is ${name}, I am ${age} years old, and I ${student}`;
+                //we use this shit to display the final string with all the information
+            }
 
-        if(isStudent.toLowerCase() == "yes"){
-            student = "am a student";
-        }else{
-            student = "am not a student";
+            console.log(`Hi my name is ${name}, I am ${age} years old, and I ${student}`);
+            //same thing but you can see this fuck from web console
         }
-        console.log(`Hi my name is ${name}, I am ${age} years old, and I ${student}`)
-
-        if(name != null){
-            document.getElementById("demo").innerHTML = `Hi my name is ${name}, I am ${age} years old, and I ${student}`;
-        }
+        
     </script>
 
 </html>
