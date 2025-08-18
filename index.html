@@ -1,1 +1,32 @@
-<p>Hello World!</p>
+<html>
+
+    <head>
+        <title>This is my first website with javascript</title>
+    </head>
+
+    <body>
+        <p id="demo"></p>
+        <button type = "button" id="btn_click">Click this for a result</button>
+    </body>
+
+    <script>
+
+
+        name = prompt("Enter your name: ");
+        age = prompt("Enter your age: ");
+        isStudent = prompt("Are you a student? ");
+        student = "";
+
+        if(isStudent.toLowerCase() == "yes"){
+            student = "am a student";
+        }else{
+            student = "am not a student";
+        }
+        console.log(`Hi my name is ${name}, I am ${age} years old, and I ${student}`)
+
+        if(name != null){
+            document.getElementById("demo").innerHTML = `Hi my name is ${name}, I am ${age} years old, and I ${student}`;
+        }
+    </script>
+
+</html>
